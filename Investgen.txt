@@ -1,0 +1,141 @@
+investwise-india/
+├── frontend/                      # React frontend application
+│   ├── public/                    # Static assets
+│   │   ├── favicon.ico
+│   │   ├── logo.png
+│   │   ├── manifest.json
+│   │   └── robots.txt
+│   ├── src/
+│   │   ├── components/            # React components
+│   │   │   ├── common/            # Reusable UI components
+│   │   │   │   ├── Button.tsx
+│   │   │   │   ├── Input.tsx
+│   │   │   │   ├── Card.tsx
+│   │   │   │   ├── LoadingSpinner.tsx
+│   │   │   │   └── AdBanner.tsx
+│   │   │   ├── layout/
+│   │   │   │   ├── Header.tsx
+│   │   │   │   ├── Footer.tsx
+│   │   │   │   ├── Layout.tsx
+│   │   │   │   ├── Sidebar.tsx
+│   │   │   │   └── MobileNav.tsx
+│   │   │   ├── auth/
+│   │   │   │   ├── LoginForm.tsx
+│   │   │   │   ├── RegisterForm.tsx
+│   │   │   │   └── ForgotPasswordForm.tsx
+│   │   │   ├── dashboard/
+│   │   │   │   ├── InvestmentSummary.tsx
+│   │   │   │   ├── PortfolioChart.tsx
+│   │   │   │   ├── RecentTransactions.tsx
+│   │   │   │   └── InvestmentDashboard.tsx
+│   │   │   ├── calculators/
+│   │   │   │   ├── TaxCalculator.tsx
+│   │   │   │   ├── TaxBreakdown.tsx
+│   │   │   │   ├── BuyVsRentCalculator.tsx
+│   │   │   │   ├── SIPCalculator.tsx
+│   │   │   │   ├── PPFCalculator.tsx
+│   │   │   │   └── HomeLoanEMICalculator.tsx
+│   │   │   └── investments/
+│   │   │       ├── InvestmentList.tsx
+│   │   │       ├── InvestmentForm.tsx
+│   │   │       ├── InvestmentDetail.tsx
+│   │   │       └── TransactionForm.tsx
+│   │   ├── context/               # React context providers
+│   │   │   ├── AuthContext.tsx
+│   │   │   └── ThemeContext.tsx
+│   │   ├── hooks/                 # Custom React hooks
+│   │   │   ├── useAuth.ts
+│   │   │   ├── useInvestmentData.ts
+│   │   │   ├── useMediaQuery.ts
+│   │   │   └── useTaxCalculation.ts
+│   │   ├── pages/                 # Page components
+│   │   │   ├── Home.tsx
+│   │   │   ├── Dashboard.tsx
+│   │   │   ├── Investments.tsx
+│   │   │   ├── Calculators.tsx
+│   │   │   ├── TaxCalculator.tsx
+│   │   │   ├── BuyVsRent.tsx
+│   │   │   ├── Profile.tsx
+│   │   │   ├── Login.tsx
+│   │   │   └── Register.tsx
+│   │   ├── services/              # API services
+│   │   │   ├── api.ts             # Base API setup
+│   │   │   ├── authService.ts
+│   │   │   ├── investmentService.ts
+│   │   │   └── calculatorService.ts
+│   │   ├── utils/                 # Utility functions
+│   │   │   ├── formatters.ts      # Date, currency formatters
+│   │   │   ├── validators.ts      # Form validation
+│   │   │   ├── taxCalculations.ts # Tax calculation logic
+│   │   │   └── analytics.ts       # Analytics helpers
+│   │   ├── types/                 # TypeScript type definitions
+│   │   │   ├── investment.ts
+│   │   │   ├── tax.ts
+│   │   │   ├── user.ts
+│   │   │   └── index.ts
+│   │   ├── App.tsx                # Main app component
+│   │   ├── index.tsx              # Entry point
+│   │   └── routes.tsx             # Application routes
+│   ├── .eslintrc.js               # ESLint configuration
+│   ├── .prettierrc                # Prettier configuration
+│   ├── tailwind.config.js         # Tailwind CSS configuration
+│   ├── tsconfig.json              # TypeScript configuration
+│   ├── package.json               # Frontend dependencies
+│   └── vite.config.ts             # Vite configuration
+├── backend/                       # Node.js backend application
+│   ├── src/
+│   │   ├── controllers/           # Request handlers
+│   │   │   ├── authController.ts
+│   │   │   ├── investmentController.ts
+│   │   │   ├── categoryController.ts
+│   │   │   └── userController.ts
+│   │   ├── middleware/            # Express middleware
+│   │   │   ├── auth.ts            # Authentication middleware
+│   │   │   ├── errorHandler.ts    # Error handling
+│   │   │   ├── rateLimiter.ts     # API rate limiting
+│   │   │   └── validator.ts       # Request validation
+│   │   ├── models/                # Data models
+│   │   │   └── index.ts           # Exports all models
+│   │   ├── routes/                # API routes
+│   │   │   ├── authRoutes.ts
+│   │   │   ├── investmentRoutes.ts
+│   │   │   ├── calculatorRoutes.ts
+│   │   │   └── index.ts
+│   │   ├── services/              # Business logic
+│   │   │   ├── authService.ts
+│   │   │   ├── investmentService.ts
+│   │   │   ├── taxService.ts
+│   │   │   └── emailService.ts
+│   │   ├── utils/                 # Utility functions
+│   │   │   ├── logger.ts
+│   │   │   ├── errorTypes.ts
+│   │   │   └── taxCalculations.ts
+│   │   ├── config/                # Configuration
+│   │   │   ├── database.ts        # Database connection
+│   │   │   ├── auth.ts            # Auth configuration
+│   │   │   └── environment.ts     # Environment variables
+│   │   ├── app.ts                 # Express app setup
+│   │   └── server.ts              # Server entry point
+│   ├── prisma/                    # Prisma ORM
+│   │   ├── schema.prisma          # Database schema
+│   │   └── migrations/            # Database migrations
+│   ├── .eslintrc.js               # ESLint configuration
+│   ├── tsconfig.json              # TypeScript configuration
+│   ├── jest.config.js             # Jest test configuration
+│   └── package.json               # Backend dependencies
+├── docker/                        # Docker configuration
+│   ├── frontend.Dockerfile        # Frontend container
+│   ├── backend.Dockerfile         # Backend container
+│   └── nginx.conf                 # Nginx configuration
+├── scripts/                       # Utility scripts
+│   ├── seed-data.js               # Seed database with initial data
+│   └── deploy.sh                  # Deployment script
+├── .github/                       # GitHub configuration
+│   └── workflows/                 # GitHub Actions
+│       ├── frontend-ci.yml        # Frontend CI pipeline
+│       └── backend-ci.yml         # Backend CI pipeline
+├── docker-compose.yml             # Docker Compose configuration
+├── .env.example                   # Example environment variables
+├── .gitignore                     # Git ignore file
+├── README.md                      # Project documentation
+└── LICENSE                        # Project license
